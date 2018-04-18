@@ -1,6 +1,6 @@
 //XML
 <?xml version="1.0" encoding="UTF-8"?>
-<!--(title, year, country, genre, summary, director, and actor)-->
+
 <!DOCTYPE Movies SYSTEM "Movies.dtd">
 <Movies>
     <Movie>

@@ -6,5 +6,11 @@
 <!ELEMENT country (#PCDATA)>
 <!ELEMENT genre (#PCDATA)>
 <!ELEMENT summary (#PCDATA)>
-<!ELEMENT director (#PCDATA)>
-<!ELEMENT actor (#PCDATA)>
+<!ELEMENT director (firstname, lastname, dob)>
+<!ELEMENT actor ((firstname, lastname, dob, role) | actor)*>
+
+<!ELEMENT firstname (#PCDATA)>
+<!ELEMENT lastname (#PCDATA)>
+<!ELEMENT dob (#PCDATA)>
+<!ELEMENT role (#PCDATA)>
+
