@@ -1,6 +1,5 @@
 //XML
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!DOCTYPE Movies SYSTEM "Movies.dtd">
 <Movies>
     <Movie>
@@ -9,8 +8,40 @@
         <country>USA</country>
         <genre>Action</genre>
         <summary>Marvel Superhero Movie</summary>
-        <director>Jon Favraeu</director>
-        <actor>Robert Downey JR.</actor>
+        
+        <director>
+            <firstname>Jon</firstname>
+            <lastname> Favraeu</lastname>
+            <dob>1966-10-19</dob>
+        </director>
+        
+        <actor>
+            <actor>
+                <firstname>Robert</firstname>
+                <lastname>Downey JR.</lastname>
+                <dob>1965-04-04</dob>
+                <role>Tony Stark (aka IronMan)</role>
+            </actor>
+            <actor>
+                <firstname>Gwyneth</firstname>
+                <lastname>Paltrow</lastname>
+                <dob>1972-09-27</dob>
+                <role>Pepper Pots (PA to Tony Stark and GirlFriend)</role>
+            </actor>
+            <actor>
+                <firstname>Samuel</firstname>
+                <lastname>Jackson</lastname>
+                <dob>1948-12-21</dob>
+                <role>Nick Fury (Director of SHIELD)</role>
+            </actor>
+            <actor>
+                <firstname>Jon</firstname>
+                <lastname> Favraeu</lastname>
+                <dob>1966-10-19</dob>
+                <role>Tony Stark's BodyGuard</role>
+            </actor>
+        </actor>
+        
     </Movie>
     <Movie>
         <title>Iron Man 2</title>
@@ -18,20 +49,74 @@
         <country>USA</country>
         <genre>Action</genre>
         <summary>Marvel Superhero Movie</summary>
-        <director>Jon Favraeu</director>
-        <actor>Robert Downey JR.</actor>
+        <director>
+            <firstname>Jon</firstname>
+            <lastname> Favraeu</lastname>
+            <dob>1966-10-19</dob>
+        </director>
+      <actor>
+          <actor>
+              <firstname>Robert</firstname>
+              <lastname>Downey JR.</lastname>
+              <dob>1965-04-04</dob>
+              <role>Tony Stark (aka IronMan)</role>
+          </actor>
+          <actor>
+              <firstname>Gwyneth</firstname>
+              <lastname>Paltrow</lastname>
+              <dob>1972-09-27</dob>
+              <role>Pepper Pots (PA to Tony Stark and GirlFriend)</role>
+          </actor>
+          <actor>
+              <firstname>Samuel</firstname>
+              <lastname>Jackson</lastname>
+              <dob>1948-12-21</dob>
+              <role>Nick Fury (Director of SHIELD)</role>
+          </actor>
+          <actor>
+              <firstname>Jon</firstname>
+              <lastname> Favraeu</lastname>
+              <dob>1966-10-19</dob>
+              <role>Tony Stark's BodyGuard</role>
+          </actor>
+      </actor>
     </Movie>
+    
     <Movie>
         <title>Thor</title>
         <year>2011</year>
         <country>USA</country>
         <genre>Action</genre>
         <summary></summary>
-        <director>Jon Favraeu</director>
-        <actor>Robert Downey JR.</actor>
+        <director>
+            <firstname>Kenneth</firstname>
+            <lastname>Branagh</lastname>
+            <dob>1960-12-10</dob>
+        </director>
+        <actor>
+            <actor>
+                <firstname>Chris</firstname>
+                <lastname>Hemsworth</lastname>
+                <dob>1983-08-11</dob>
+                <role>Thor/Son of Odin/God of Thunder</role>
+            </actor>
+            <actor>
+                <firstname>Natalie</firstname>
+                <lastname>Portman</lastname>
+                <dob>1981-06-09</dob>
+                <role>Dr. Jane Foster</role>
+            </actor>
+            <actor>
+                <firstname>Clark</firstname>
+                <lastname>Gregg</lastname>
+                <dob>1962-04-02</dob>
+                <role>Phil Coulson(Agent of Shield)</role>
+            </actor>
+        </actor>
     </Movie>
     
 </Movies>
+
 
 
 
@@ -45,8 +130,14 @@
 <!ELEMENT country (#PCDATA)>
 <!ELEMENT genre (#PCDATA)>
 <!ELEMENT summary (#PCDATA)>
-<!ELEMENT director (#PCDATA)>
-<!ELEMENT actor (#PCDATA)>
+<!ELEMENT director (firstname, lastname, dob)>
+<!ELEMENT actor ((firstname, lastname, dob, role) | actor)*>
+
+<!ELEMENT firstname (#PCDATA)>
+<!ELEMENT lastname (#PCDATA)>
+<!ELEMENT dob (#PCDATA)>
+<!ELEMENT role (#PCDATA)>
+
 
 
 
