@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT Employees (Employee+)>
+<!ELEMENT Employee (Emp_Id,Emp_Name,Dept,Contact_No,Salary,Experience)>
+<!ELEMENT Emp_Id (#PCDATA)>
+<!ELEMENT Emp_Name (#PCDATA)>
+<!ELEMENT Dept (#PCDATA)>
+<!ELEMENT Contact_No (#PCDATA)>
+<!ELEMENT Salary (#PCDATA)>
+<!ELEMENT Experience (#PCDATA)>
+

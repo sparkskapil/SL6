@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="20.0">
+    <meta>
+        <filters directoryPatterns="" filePatterns="BookStore.xpr" positiveFilePatterns="" showHiddenFiles="false"/>
+        <options/>
+    </meta>
+    <projectTree name="BookStore.xpr">
+        <file name="Bookstore.dtd"/>
+        <file name="Bookstore.xml"/>
+    </projectTree>
+</project>

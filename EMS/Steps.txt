@@ -1,0 +1,85 @@
+//XML DOCUMENT
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Employees SYSTEM "EMS.dtd">
+<Employees>
+    <Employee>
+        <Emp_Id>101</Emp_Id>
+        <Emp_Name>John Doe</Emp_Name>
+        <Dept>Development</Dept>
+        <Contact_No>9923598252</Contact_No>
+        <Salary>30000</Salary>
+        <Experience>3</Experience>
+    </Employee>
+    <Employee>
+        <Emp_Id>102</Emp_Id>
+        <Emp_Name>Jane Doe</Emp_Name>
+        <Dept>Tele Calling</Dept>
+        <Contact_No>9956826757</Contact_No>
+        <Salary>5000</Salary>
+        <Experience>1</Experience>
+    </Employee>
+    <Employee>
+        <Emp_Id>103</Emp_Id>
+        <Emp_Name>June Stuart</Emp_Name>
+        <Dept>Tele Calling</Dept>
+        <Contact_No>9595363634</Contact_No>
+        <Salary>7000</Salary>
+        <Experience>2</Experience>
+    </Employee>
+    <Employee>
+        <Emp_Id>104</Emp_Id>
+        <Emp_Name>Steve Robert</Emp_Name>
+        <Dept>Project Management</Dept>
+        <Contact_No>9513478964</Contact_No>
+        <Salary>40000</Salary>
+        <Experience>12</Experience>
+    </Employee>
+</Employees>
+
+
+
+//DTD Document
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT Employees (Employee+)>
+<!ELEMENT Employee (Emp_Id,Emp_Name,Dept,Contact_No,Salary,Experience)>
+<!ELEMENT Emp_Id (#PCDATA)>
+<!ELEMENT Emp_Name (#PCDATA)>
+<!ELEMENT Dept (#PCDATA)>
+<!ELEMENT Contact_No (#PCDATA)>
+<!ELEMENT Salary (#PCDATA)>
+<!ELEMENT Experience (#PCDATA)>
+
+
+
+//XQUERIES
+//1
+for $Emp in Employees/Employee
+where $Emp/Salary > 20000
+return $Emp
+
+//2
+for $Dept in /Employees/Employee/Dept
+let $maxSal  := max(/Employees/Employee[Dept=$Dept]/Salary)
+where $maxSal < 10000
+return $Dept
+
+
+//3
+for $Emp in Employees/Employee
+where $Emp/Experience >= 10
+return $Emp
+
+
+
+//XPATH
+
+//1
+/Employees/Employee[Salary > 20000]
+
+//2
+/Employees/Employee[max(Salary) < 10000]/Dept
+
+//3
+/Employees/Employee[Experience >= 10]

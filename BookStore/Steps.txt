@@ -1,0 +1,110 @@
+1. Create XML Document
+/***************************/
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Bookstore SYSTEM "Bookstore.dtd">
+<Bookstore>
+    
+    <book>
+        <B_id>1</B_id>
+        <B_Name>Object-Oriented Programming with C++</B_Name>
+        <Author>E. Balagurusamy</Author>
+        <Price>350</Price>
+        <Publisher>McGrow Hill</Publisher>
+    </book>
+    
+    <book>
+        <B_id>2</B_id>
+        <B_Name>Object-Oriented Programming with Java</B_Name>
+        <Author>E. Balagurusamy</Author>
+        <Price>550</Price>
+        <Publisher>McGrow Hill</Publisher>
+    </book>
+    
+    <book> 
+        <B_id>3</B_id>
+        <B_Name>Let Us C</B_Name>
+        <Author>Yashwant Kanetkar</Author>
+        <Price>200</Price>
+        <Publisher>BPB</Publisher>
+    </book>
+    
+    <book>
+        <B_id>4</B_id>
+        <B_Name>Algorithm Design Manual</B_Name>
+        <Author>Steven S Skiena</Author>
+        <Price>4500</Price>
+        <Publisher>Springer</Publisher>
+    </book>
+    
+    <book>
+        <B_id>5</B_id>
+        <B_Name>A Student's Introduction to Programming</B_Name>
+        <Author>Daniel Cook</Author>
+        <Price>80</Price>
+        <Publisher>XYZ</Publisher>
+    </book>
+    
+</Bookstore>
+
+
+
+/*******************************************/
+
+
+2. Create Corresponding DTD
+
+/************************************************/
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT Bookstore (book+)>
+<!ELEMENT book (B_id, B_Name, Author, Price, Publisher)>
+<!ELEMENT B_id (#PCDATA)>
+<!ELEMENT B_Name (#PCDATA)>
+<!ELEMENT Author (#PCDATA)>
+<!ELEMENT Price (#PCDATA)>
+<!ELEMENT Publisher (#PCDATA)>
+
+
+/*********************************************/
+
+3. Validate XML Document 
+
+4. Start XPath/XQuery Builder
+5. Select XQUERY for Running XQueries
+
+/************XQUERIES******************/
+//1
+
+for $book in /Bookstore/book
+where $book/Price >100
+return $book
+
+//2
+
+for $book in /Bookstore/book
+where $book/Author = "E. Balagurusamy"
+return $book
+
+//3
+
+for $book in /Bookstore/book
+order by $book/Publisher
+return  $book/Author 
+
+
+6. Select XPATH for Running XPath
+/*******************************************/
+
+//1
+
+/Bookstore/book[Price>100]
+
+//2
+
+/Bookstore/book[Author = "E. Balagurusamy"]
+
+
+//3 Lists All Authors Ordering Not Possible With XPath
+
+/Bookstore/book/Author
+
+

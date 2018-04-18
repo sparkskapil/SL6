@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Employees SYSTEM "EMS.dtd">
+<Employees>
+    <Employee>
+        <Emp_Id>101</Emp_Id>
+        <Emp_Name>John Doe</Emp_Name>
+        <Dept>Development</Dept>
+        <Contact_No>9923598252</Contact_No>
+        <Salary>30000</Salary>
+        <Experience>3</Experience>
+    </Employee>
+    <Employee>
+        <Emp_Id>102</Emp_Id>
+        <Emp_Name>Jane Doe</Emp_Name>
+        <Dept>Tele Calling</Dept>
+        <Contact_No>9956826757</Contact_No>
+        <Salary>5000</Salary>
+        <Experience>1</Experience>
+    </Employee>
+    <Employee>
+        <Emp_Id>103</Emp_Id>
+        <Emp_Name>June Stuart</Emp_Name>
+        <Dept>Tele Calling</Dept>
+        <Contact_No>9595363634</Contact_No>
+        <Salary>7000</Salary>
+        <Experience>2</Experience>
+    </Employee>
+    <Employee>
+        <Emp_Id>104</Emp_Id>
+        <Emp_Name>Steve Robert</Emp_Name>
+        <Dept>Project Management</Dept>
+        <Contact_No>9513478964</Contact_No>
+        <Salary>40000</Salary>
+        <Experience>12</Experience>
+    </Employee>
+</Employees>

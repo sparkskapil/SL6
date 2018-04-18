@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT Bookstore (book+)>
+<!ELEMENT book (B_id, B_Name, Author, Price, Publisher)>
+<!ELEMENT B_id (#PCDATA)>
+<!ELEMENT B_Name (#PCDATA)>
+<!ELEMENT Author (#PCDATA)>
+<!ELEMENT Price (#PCDATA)>
+<!ELEMENT Publisher (#PCDATA)>
+

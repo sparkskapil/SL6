@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="20.0">
+    <meta>
+        <filters directoryPatterns="" filePatterns="EMS.xpr" positiveFilePatterns="" showHiddenFiles="false"/>
+        <options/>
+    </meta>
+    <projectTree name="EMS.xpr">
+        <folder path="."/>
+        <file name="EmployeeManagement.xml"/>
+        <file name="EMS.dtd"/>
+    </projectTree>
+</project>
