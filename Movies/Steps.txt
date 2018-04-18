@@ -181,3 +181,46 @@ return $movie
 /Movies/*[last()]
 
 
+
+
+
+
+
+
+//*****************SECOND PART************************//
+
+//a
+for $movie in /Movies/Movie
+where contains($movie/title,"V")
+return $movie
+
+//b
+for $movie in /Movies/Movie
+where count($movie/actor/actor) = 3
+return $movie
+
+
+//c
+for $movie in /Movies/Movie
+where $movie/year > 2002
+return 
+<Movie> 
+{$movie/title} 
+{$movie/year}
+</Movie>
+
+//d
+for $movie in /Movies/Movie
+let $director := $movie/director
+for $actor in $movie/actor/actor
+where $actor/firstname = $director/firstname and $actor/lastname = $director/lastname
+return  $movie/title
+
+
+//e
+for $genre in distinct-values(/Movies/Movie/genre) 
+for $movie in Movies/Movie
+where $movie/genre = $genre
+return  $movie/title
+
+
