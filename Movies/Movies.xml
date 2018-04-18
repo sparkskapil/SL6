@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--(title, year, country, genre, summary, director, and actor)-->
+<!DOCTYPE Movies SYSTEM "Movies.dtd">
+<Movies>
+    <Movie>
+        <title>Iron Man</title>
+        <year>2008</year>
+        <country>USA</country>
+        <genre>Action</genre>
+        <summary>Marvel Superhero Movie</summary>
+        <director>Jon Favraeu</director>
+        <actor>Robert Downey JR.</actor>
+    </Movie>
+    <Movie>
+        <title>Iron Man 2</title>
+        <year>2010</year>
+        <country>USA</country>
+        <genre>Action</genre>
+        <summary>Marvel Superhero Movie</summary>
+        <director>Jon Favraeu</director>
+        <actor>Robert Downey JR.</actor>
+    </Movie>
+    <Movie>
+        <title>Thor</title>
+        <year>2011</year>
+        <country>USA</country>
+        <genre>Action</genre>
+        <summary></summary>
+        <director>Jon Favraeu</director>
+        <actor>Robert Downey JR.</actor>
+    </Movie>
+    
+</Movies>

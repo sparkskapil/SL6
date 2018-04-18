@@ -1,0 +1,92 @@
+//XML
+<?xml version="1.0" encoding="UTF-8"?>
+<!--(title, year, country, genre, summary, director, and actor)-->
+<!DOCTYPE Movies SYSTEM "Movies.dtd">
+<Movies>
+    <Movie>
+        <title>Iron Man</title>
+        <year>2008</year>
+        <country>USA</country>
+        <genre>Action</genre>
+        <summary>Marvel Superhero Movie</summary>
+        <director>Jon Favraeu</director>
+        <actor>Robert Downey JR.</actor>
+    </Movie>
+    <Movie>
+        <title>Iron Man 2</title>
+        <year>2010</year>
+        <country>USA</country>
+        <genre>Action</genre>
+        <summary>Marvel Superhero Movie</summary>
+        <director>Jon Favraeu</director>
+        <actor>Robert Downey JR.</actor>
+    </Movie>
+    <Movie>
+        <title>Thor</title>
+        <year>2011</year>
+        <country>USA</country>
+        <genre>Action</genre>
+        <summary></summary>
+        <director>Jon Favraeu</director>
+        <actor>Robert Downey JR.</actor>
+    </Movie>
+    
+</Movies>
+
+
+
+//XML DTD
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT Movies (Movie+)>
+<!ELEMENT Movie (title,year,country,genre,summary, director, actor)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT country (#PCDATA)>
+<!ELEMENT genre (#PCDATA)>
+<!ELEMENT summary (#PCDATA)>
+<!ELEMENT director (#PCDATA)>
+<!ELEMENT actor (#PCDATA)>
+
+
+
+
+
+//XQuery
+
+//1
+for $movie in /Movies/Movie
+where  $movie/summary != ""
+return $movie
+
+
+//2
+for $movie in /Movies/Movie
+where  $movie/summary = ""
+return $movie
+
+//3
+for $movie in /Movies/Movie
+where  2018 - $movie/year > 5 
+return $movie/title
+
+//4
+for $movie in /Movies/*[last()]
+return $movie
+
+
+//XPath
+
+//1
+/Movies/Movie[summary!=""]
+
+//2
+/Movies/Movie[summary=""]
+
+//3
+/Movies/Movie[2018 - year > 5]
+
+//4
+/Movies/*[last()]
+
+

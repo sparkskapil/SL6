@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT Movies (Movie+)>
+<!ELEMENT Movie (title,year,country,genre,summary, director, actor)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT country (#PCDATA)>
+<!ELEMENT genre (#PCDATA)>
+<!ELEMENT summary (#PCDATA)>
+<!ELEMENT director (#PCDATA)>
+<!ELEMENT actor (#PCDATA)>
